@@ -5,11 +5,11 @@ import type { App } from 'vue';
 config.rawError = true;
 
 const store = createStore({
-    strict: true
+  strict: true
 });
 
 export function setupStore(app: App<Element>) {
-    app.use(store);
+  app.use(store);
 }
 
 export default store;

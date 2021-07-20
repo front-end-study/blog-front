@@ -1,5 +1,5 @@
-import { ref } from "vue";
-import { tryOnUnmounted } from "../utils/vueHelper";
+import { ref } from 'vue';
+import { tryOnUnmounted } from '../utils/vueHelper';
 
 export function useTimeoutRef(wait: number) {
   const readyRef = ref(false);

@@ -1,4 +1,4 @@
-declare type Indexable<T extends any = any> = {
+declare type Indexable = {
   [key: string]: any;
 };
 

@@ -1,34 +1,28 @@
 <template>
   <div>
     <h3>{{ pageName }}</h3>
-    <input type="text" v-model:value="count">
+    <!-- <input type="text" v-model:value="count"> -->
   </div>
 </template>
 
 <script>
-import { AppStore } from '../../store/modules/app'
-import { defineComponent, onMounted, ref, watch } from 'vue';
+  import { AppStore } from '../../store/modules/app';
+  import { defineComponent, onMounted } from 'vue';
 
-export default defineComponent({
-  mounted() {
-    console.log(AppStore.getSysNo);
-  },
-  setup() {
-    const pageName = 'Home Page';
-    const count = ref(0);
+  export default defineComponent({
+    setup() {
+      const pageName = 'Home Page';
 
-    onMounted(() => {
-      console.log('mounted');
-    })
+      onMounted(() => {
+        console.log('mounted');
+      });
 
-    watch(count, (newVal, oldVal) => {
-      console.log(`the new value is: ${newVal}`);
-    });
-    
-    return {
-      pageName
+      return {
+        pageName
+      };
+    },
+    mounted() {
+      console.log(AppStore.getSysNo);
     }
-  }
-})
-
+  });
 </script>

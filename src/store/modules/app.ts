@@ -1,22 +1,16 @@
-import {
-  Module,
-  Action,
-  Mutation,
-  VuexModule,
-  getModule
-} from "vuex-module-decorators";
-import store from "..";
-import localServer from "../../utils/localServer";
+import { Module, Mutation, VuexModule, getModule } from 'vuex-module-decorators';
+import store from '..';
+import localServer from '../../utils/localServer';
 
 @Module({
   namespaced: true,
-  name: "app",
+  name: 'app',
   store,
   dynamic: true
 })
 export class AppStoreModule extends VuexModule {
-  private sysNo: string = localServer.get("sysNo");
-  private sysInfo: SysInfo = localServer.get("sysInfo");
+  private sysNo: string = localServer.get('sysNo');
+  private sysInfo: SysInfo = localServer.get('sysInfo');
 
   get getSysNo() {
     return this.sysNo;
@@ -38,8 +32,8 @@ export class AppStoreModule extends VuexModule {
 
   @Mutation
   commitReloadData() {
-    this.sysNo = localServer.get("sysNo");
-    this.sysInfo = localServer.get("sysInfo");
+    this.sysNo = localServer.get('sysNo');
+    this.sysInfo = localServer.get('sysInfo');
   }
 }
 

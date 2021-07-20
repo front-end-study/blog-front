@@ -1,12 +1,12 @@
-import { RouteRecordRaw } from "vue-router";
+import { RouteRecordRaw } from 'vue-router';
 
 export const routers: RouteRecordRaw[] = [
   {
-    path: "/",
-    name: "Root",
-    redirect: "/home",
+    path: '/',
+    name: 'Root',
+    redirect: '/home',
     meta: {
-      title: "Root"
+      title: 'Root'
     }
   },
   {

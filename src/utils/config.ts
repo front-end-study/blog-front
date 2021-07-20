@@ -1,3 +1,3 @@
 export const SysConfig = {
-    localServerKey: 'vite-app'
-}
+  localServerKey: 'vite-app'
+};
